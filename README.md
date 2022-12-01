@@ -1,0 +1,1 @@
+Lottery implementation using smart contracts and hardhat, as part of FCC's online course.
