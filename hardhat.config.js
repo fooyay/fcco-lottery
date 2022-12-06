@@ -10,8 +10,7 @@ require("dotenv").config()
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "key"
 const GOERLI_RPC_URL =
-    process.env.GOERLI_RPC_URL ||
-    "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+    process.env.GOERLI_RPC_URL || "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY || "0x00"
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "key"
 
@@ -48,5 +47,8 @@ module.exports = {
         outputFile: "gas-report.txt",
         noColors: true,
         // coinmarketcap: COINMARKETCAP_API_KEY,
+    },
+    mocha: {
+        timeout: 300000, // 300 seconds max
     },
 }
